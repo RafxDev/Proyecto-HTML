@@ -10,7 +10,7 @@
 - 🎨 Integracion Estilos Basicos CSS
 
 Link de la Web: <br>
-  https://proyecto-html-garfield.netlify.app/
+<a href='https://proyecto-html-garfield.netlify.app/' target='_blank'>Click Aqui
 
 <h3>Inicio</h3>
   <a href='https://postimg.cc/LgKkQKJh' target='_blank'><img src='https://i.postimg.cc/rszhmqcG/imagen-2024-07-19-162907107.png' border='0' alt='imagen-2024-07-19-162907107'/></a>
