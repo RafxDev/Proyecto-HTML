@@ -7,6 +7,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/web.ico" type="image/x-icon">
     <title>Live Coding</title>
+        <style>
+    body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
+        color: #e6edf3;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #161b22;
+        border-top: 2px solid #00e5ff;
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #e6edf3;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #00e5ff;
+        color: #0d1117;
+    }
+
+    .active {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    h1 {
+        background-color: #0d1117;
+        padding: 15px;
+        margin: 0;
+        color: #00e5ff;
+        text-shadow: 0 0 12px rgba(0,229,255,.8);
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        color: #7dd3fc;
+        text-align: center;
+    }
+
+    hr{
+        border: none;
+        height: 1px;
+        background: #00e5ff;
+        width: 90%;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #d1d5db;
+    }
+
+    .image {
+        float: right;
+        margin: 0 0 20px 20px;
+        max-width: 25%;
+        height: auto;
+        border: 2px solid #00e5ff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,229,255,.35);
+    }
+
+    .image2 {
+        float: left;
+        margin: 0 20px 20px 0;
+        max-width: 25%;
+        height: auto;
+        border: 2px solid #00e5ff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,229,255,.35);
+    }
+
+    .article {
+        float: left;
+        width: 70%;
+        background-color: #161b22;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #30363d;
+        border-left: 4px solid #00e5ff;
+    }
+
+    .footer {
+        background-color: #161b22;
+        color: #9ca3af;
+        padding: 15px;
+        text-align: center;
+        clear: both;
+        border-top: 2px solid #00e5ff;
+    }
+</style>
+    
 </head>
 
 <body>
@@ -15,7 +138,7 @@
         <h1>Live Coding: Una Nueva Experiencia</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a class="active" href="index.html">Inicio</a></li>
                 <li><a href="cronologia.html">Cronologia</a></li>
                 <li><a href="artistas.html">Artistas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -23,8 +146,49 @@
         </nav>
     </header>
 
-    <h2>¿Y Si Combinamos Codigo y Musica?</h2>
+    <h2 style="margin: 15px;">¿Y Si Combinamos Codigo y Musica?</h2>
     <hr>
+
+    <article class="container">
+        <h2>¿Qué es el Live Coding?</h2>
+        <img class="image" src="Assets/img/imagehome1.webp" alt="img1livecode">
+        <p>
+            El Live Coding es una disciplina artística y tecnológica en la que una persona crea música, 
+            imágenes o animaciones escribiendo código en tiempo real frente a una audiencia. En lugar 
+            de utilizar únicamente controles gráficos o instrumentos tradicionales, el artista modifica 
+            el programa mientras este se está ejecutando, permitiendo que el público observe todo el 
+            proceso creativo. En el ámbito musical, el código se convierte en el instrumento. 
+            Cada línea escrita puede cambiar ritmos, melodías, efectos, sintetizadores o estructuras 
+            completas de una composición. Esto hace que cada presentación sea única e irrepetible. 
+            Actualmente existen diferentes herramientas para practicar Live Coding, como Strudel, 
+            TidalCycles, Sonic Pi, FoxDot, Orca, SuperCollider y Hydra, cada una enfocada en distintos 
+            estilos musicales o visuales.
+        </p>
+        <img class="image2" src="Assets/img/imagehome2.jpg" alt="img2livecode">
+        <p>
+            El Live Coding utiliza lenguajes de programación diseñados para controlar eventos musicales 
+            o visuales. En lugar de escribir un programa completo y ejecutarlo al finalizar, el artista 
+            modifica constantemente el código mientras la música continúa sonando. Los cambios son 
+            inmediatos, permitiendo improvisar como lo haría un músico con un instrumento tradicional.
+            Por ejemplo, una sola línea puede: Crear un ritmo de batería, Cambiar la velocidad de una canción, 
+            Añadir un sintetizador, Aplicar efectos como eco o reverberación y Generar melodías mediante algoritmos.
+            Esta forma de trabajo convierte la programación en una herramienta artística.
+        </p>
+        <img class="image" src="Assets/img/imagehome3.jpg" alt="img3livecode">
+        <p>
+            El Live Coding une disciplinas que normalmente se consideran separadas comola Programación, Música, Matemáticas, Arte digital, Improvisación, Creatividad computacional 
+            También ha impulsado el desarrollo de nuevos lenguajes de programación especializados en creación artística y ha inspirado investigaciones sobre interacción humano-computador, inteligencia artificial aplicada al arte y educación en programación.
+
+            Actualmente existen festivales internacionales dedicados exclusivamente al Live Coding, donde participan artistas, investigadores, músicos e ingenieros de todo el mundo.
+        </p>
+    </article>
+
+
+
+
+    <footer class="footer">
+        <p>Derechos Reservados &copy; 2026</p>
+    </footer>
 
 </body>
 </html>
