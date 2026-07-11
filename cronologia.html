@@ -7,6 +7,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/web.ico" type="image/x-icon">
     <title>Live Coding</title>
+    <style>
+    body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
+        color: #e6edf3;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #161b22;
+        border-top: 2px solid #00e5ff;
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #e6edf3;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #00e5ff;
+        color: #0d1117;
+    }
+
+    .active {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    h1 {
+        background-color: #0d1117;
+        padding: 15px;
+        margin: 0;
+        color: #00e5ff;
+        text-shadow: 0 0 12px rgba(0,229,255,.8);
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    h2{
+        text-align:center;
+        color:#7dd3fc;
+        margin:20px;
+        font-size:30px;
+    }
+
+    hr{
+        border:none;
+        height:1px;
+        background:#00e5ff;
+        width:90%;
+        margin-bottom:30px;
+    }
+
+    table {
+        width:90%;
+        max-width:1300px;
+        border-collapse: collapse;
+        background-color: #161b22;
+        border: 2px solid #00e5ff;
+        box-shadow: 0 0 20px rgba(0,229,255,.25);
+    }
+
+    th {
+        background: #00bcd4;
+        color: #0d1117;
+        padding: 15px;
+        font-size: 18px;
+        border: 1px solid #30363d;
+    }
+
+    td {
+        border: 1px solid #30363d;
+        padding: 14px;
+        color: #d1d5db;
+        vertical-align: top;
+    }
+
+    tr:nth-child(even){
+        background:#1b2430;
+    }
+
+    tr:nth-child(odd){
+        background:#161b22;
+    }
+
+    tr:hover{
+        background:#233554;
+        transition:.3s;
+    }
+
+    .footer {
+        background-color: #161b22;
+        color: #9ca3af;
+        padding: 15px;
+        text-align: center;
+        clear: both;
+        border-top: 2px solid #00e5ff;
+        margin-top: 30px;
+    }
+</style>
 </head>
 
 <body>
@@ -16,16 +139,168 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="cronologia.html">Cronologia</a></li>
+                <li><a class="active" href="cronologia.html">Cronologia</a></li>
                 <li><a href="artistas.html">Artistas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <h2>Hechos Que Forjaron El Live Coding</h2>
+    <hr>
+
+    <div class="container">
+        <table>
+            <colgroup>
+                <col style="background-color: rgb(207, 207, 207);">
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <th>Año</th>
+            <th>Persona</th>
+            <th>Aporte</th>
+
+            <tr>
+                <td>1957</td>
+                <td>Max Mathews</td>
+                <td>Desarrolla MUSIC I en Bell Labs, considerado el primer lenguaje para síntesis digital de sonido.</td>
+            </tr>
+
+            <tr>
+                <td>1963</td>
+                <td>Max Mathews</td>
+                <td>Presenta MUSIC IV, ampliamente utilizado en investigación musical.</td>
+            </tr>
+
+            <tr>
+                <td>1968</td>
+                <td>Douglas Engelbart</td>
+                <td>Demuestra nuevas formas de interacción entre humanos y computadoras, inspirando herramientas creativas en tiempo real.</td>
+            </tr>
+
+            <tr>
+                <td>1969</td>
+                <td>John Chowning</td>
+                <td>Descubre la síntesis FM, utilizada posteriormente en numerosos sintetizadores digitales.</td>
+            </tr>
+
+            <tr>
+                <td>1970</td>
+                <td>Barry Vercoe</td>
+                <td>Inicia el desarrollo de MUSIC 11, base de futuros lenguajes musicales.</td>
+            </tr>
+
+            <tr>
+                <td>1985</td>
+                <td>Miller Puckette</td>
+                <td>Comienza el desarrollo de Max, entorno de programación visual para música interactiva.</td>
+            </tr>
+
+            <tr>
+                <td>1991</td>
+                <td>Miller Puckette</td>
+                <td>Crea Pure Data (Pd), software libre ampliamente usado para arte interactivo y Live Coding.</td>
+            </tr>
+
+            <tr>
+                <td>1996</td>
+                <td>James McCartney</td>
+                <td>Se publica SuperCollider, uno de los sistemas más importantes para síntesis y Live Coding.</td>
+            </tr>
+
+            <tr>
+                <td>2001</td>
+                <td>Adrian Ward</td>
+                <td>Populariza el término "Live Coding" mediante presentaciones donde programa arte en vivo.</td>
+            </tr>
+
+            <tr>
+                <td>2003</td>
+                <td>Alex McLean</td>
+                <td>Comienza el desarrollo de TidalCycles y promueve el Live Coding musical.</td>
+            </tr>
+
+            <tr>
+                <td>2004</td>
+                <td>TOPLAP</td>
+                <td>Se funda la organización TOPLAP (Temporary Organisation for the Promotion of Live Algorithm Programming).</td>
+            </tr>
+
+            <tr>
+                <td>2005</td>
+                <td>Nick Collins</td>
+                <td>Publica investigaciones fundamentales sobre Live Coding y música algorítmica.</td>
+            </tr>
+
+            <tr>
+                <td>2006</td>
+                <td>Slub</td>
+                <td>Se consolida como uno de los primeros grupos de Live Coding musical.</td>
+            </tr>
+
+            <tr>
+                <td>2008</td>
+                <td>Algorave</td>
+                <td>Comienzan los primeros eventos que mezclan música electrónica y programación en vivo.</td>
+            </tr>
+
+            <tr>
+                <td>2011</td>
+                <td>Sam Aaron</td>
+                <td>Inicia el desarrollo de Sonic Pi con fines educativos.</td>
+            </tr>
+
+            <tr>
+                <td>2013</td>
+                <td>Sonic Pi</td>
+                <td>Se publica oficialmente y comienza a utilizarse en escuelas y universidades.</td>
+            </tr>
+
+            <tr>
+                <td>2014</td>
+                <td>Algorave</td>
+                <td>El movimiento se expande por Europa, Asia y América.</td>
+            </tr>
+
+            <tr>
+                <td>2016</td>
+                <td>FoxDot</td>
+                <td>Gana gran popularidad entre la comunidad Python.</td>
+            </tr>
+
+            <tr>
+                <td>2017</td>
+                <td>Olivia Jack</td>
+                <td>Presenta Hydra, herramienta para Live Coding visual.</td>
+            </tr>
+
+            <tr>
+                <td>2020</td>
+                <td>Strudel</td>
+                <td>Se inicia el desarrollo de Strudel como alternativa web inspirada en TidalCycles.</td>
+            </tr>
+
+            <tr>
+                <td>2023</td>
+                <td>Strudel</td>
+                <td>Se convierte en una de las plataformas de Live Coding más utilizadas desde el navegador.</td>
+            </tr>
+
+            <tr>
+                <td>Actualidad</td>
+                <td>Comunidad internacional</td>
+                <td>El Live Coding se utiliza en conciertos, festivales, investigación, educación y arte digital.</td>
+            </tr>
 
 
-    <footer>
+        </table>
+    </div>
+
+
+
+    <footer class="footer">
         <p>Derechos Reservados &copy; 2026</p>
     </footer>
 
