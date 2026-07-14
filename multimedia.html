@@ -7,6 +7,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/web.ico" type="image/x-icon">
     <title>Live Coding</title>
+        <style>
+    body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
+        color: #e6edf3;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #161b22;
+        border-top: 2px solid #00e5ff;
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #e6edf3;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #00e5ff;
+        color: #0d1117;
+    }
+
+    .active {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    h1 {
+        background-color: #0d1117;
+        padding: 15px;
+        margin: 0;
+        color: #00e5ff;
+        text-shadow: 0 0 12px rgba(0,229,255,.8);
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    div.gallery {
+        margin: 20px;
+        border: 2px solid #00e5ff;
+        border-radius: 10px;
+        float: left;
+        width: 28%;
+        background-color: #161b22;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,229,255,.25);
+        transition: .3s;
+    }
+
+    div.gallery:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(0,229,255,.55);
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+        color: #d1d5db;
+    }
+
+    .centrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 25px;
+    }
+
+    video {
+        width: 80%;
+        max-width: 900px;
+        border: 3px solid #00e5ff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,229,255,.35);
+        background: black;
+    }
+
+    audio {
+        width: 60%;
+        max-width: 600px;
+        margin-top: 10px;
+    }
+
+    section.centrado {
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .footer {
+        background-color: #161b22;
+        color: #9ca3af;
+        padding: 15px;
+        text-align: center;
+        clear: both;
+        border-top: 2px solid #00e5ff;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 900px) {
+
+        div.gallery {
+            width: 80%;
+            margin: 15px auto;
+            float: none;
+        }
+
+        video {
+            width: 95%;
+        }
+
+        audio {
+            width: 95%;
+        }
+
+        li {
+            float: none;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -17,15 +160,38 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="cronologia.html">Cronologia</a></li>
-                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a class="active" href="multimedia.html">Multimedia</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="centrado">
+        <video class="centrado" src="Assets/vid/switch angel.mp4" autoplay muted controls></video>
+    </div>
+    
+    <div class="centrado">
+        <audio class="centrado" src="Assets/audio/Airglow.mp3" controls></audio>
+    </div>
+    
+    <section class="centrado">
+        <div class="gallery">
+            <a href="Assets/img/img1.jpg" target="_blank"><img src="Assets/img/img1.jpg" width="700px" alt="DJ_DAVE con Switch Angel"></a>
+            <div>DJ_DAVE con Switch Angel</div>
+        </div>
 
+        <div class="gallery">
+            <a href="Assets/img/img2.jpg" target="_blank"><img src="Assets/img/img2.jpg" width="700px" alt="DJ_DAVE"></a>
+            <div>DJ_DAVE</div>
+        </div>
 
-    <footer>
+        <div class="gallery">
+            <a href="Assets/img/img3.jpg" target="_blank"><img src="Assets/img/img3.jpg" width="700px" alt="I Love DJ_DAVE"></a>
+            <div>I Love DJ_DAVE</div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <p>Derechos Reservados &copy; 2026</p>
     </footer>
 
