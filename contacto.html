@@ -189,56 +189,64 @@
 
 
     <div class="contenedor-formulario">
-    <form action="https://formsubmit.co/jrafaelmorantess@gmail.com" method="POST">
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 
-        <!-- Configuración de FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde Live Coding">
-        <input type="hidden" name="_template" value="table">
+    <!-- Netlify identifica el formulario con este campo -->
+    <input type="hidden" name="form-name" value="contacto">
 
-        <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="Nombre" placeholder="Escribí aquí tu nombre" required minlength="3">
+    <!-- Campo oculto para evitar spam -->
+    <p hidden>
+        <label>
+            No llenar este campo:
+            <input name="bot-field">
+        </label>
+    </p>
 
-        <label for="apellido">Apellido: </label>
-        <input type="text" id="apellido" name="Apellido" placeholder="Escribí aquí tu apellido" required minlength="3">
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" name="Nombre" placeholder="Escribí aquí tu nombre" required minlength="3">
 
-        <label for="mail">Email: </label>
-        <input type="email" id="mail" name="Correo" placeholder="Escribí aquí tu mail" required>
+    <label for="apellido">Apellido: </label>
+    <input type="text" id="apellido" name="Apellido" placeholder="Escribí aquí tu apellido" required minlength="3">
 
-        <label for="pais">País: </label>
-        <select name="País" id="pais">
-            <option value="Argentina">Argentina</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Perú">Perú</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="España">España</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Venezuela">Venezuela</option>
-            <option value="Paraguay">Paraguay</option>
-            <option value="Otro">Otro/Another</option>
-        </select>
+    <label for="mail">Email: </label>
+    <input type="email" id="mail" name="Correo" placeholder="Escribí aquí tu mail" required>
 
-        <label for="comentario">Comentario: </label>
-        <textarea name="Comentario" id="comentario" placeholder="Escribí aquí tu comentario"></textarea>
+    <label for="pais">País: </label>
+    <select name="País" id="pais">
+        <option value="Argentina">Argentina</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Perú">Perú</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="España">España</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="Paraguay">Paraguay</option>
+        <option value="Otro">Otro/Another</option>
+    </select>
 
-        <label>Motivo de contacto: </label><br>
+    <label for="comentario">Comentario: </label>
+    <textarea name="Comentario" id="comentario" placeholder="Escribí aquí tu comentario"></textarea>
 
-        <input type="radio" id="conocerte" name="Motivo" value="Conocerte">
-        <i>Conocerte</i>
+    <label>Motivo de contacto: </label><br>
 
-        <input type="radio" id="proyectos" name="Motivo" value="Proyectos">
-        <i>Proyectos</i>
+    <input type="radio" id="conocerte" name="Motivo" value="Conocerte">
+    <i>Conocerte</i>
 
-        <input type="radio" id="saludar" name="Motivo" value="Saludar">
-        <i>Saludar</i>
+    <input type="radio" id="proyectos" name="Motivo" value="Proyectos">
+    <i>Proyectos</i>
 
-        <input type="radio" id="reclamos" name="Motivo" value="Reclamos">
-        <i>Reclamos jaja</i>
+    <input type="radio" id="saludar" name="Motivo" value="Saludar">
+    <i>Saludar</i>
 
-        <input type="submit" value="Enviar">
+    <input type="radio" id="reclamos" name="Motivo" value="Reclamos jaja">
+    <i>Reclamos jaja</i>
 
-    </form>
+    <br><br>
+
+    <input type="submit" value="Enviar">
+
+</form>
 </div>
 
 
