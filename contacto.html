@@ -1,258 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/web.ico" type="image/x-icon">
-    <title>Live Coding</title>
-        <style>
-    body {
-        font-family: "Lucida Console", "Courier New", monospace;
-        background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
-        color: #e6edf3;
-        padding: 0;
-        margin: 0;
-    }
+    <title>Sobre Mí | Live Coding</title>
 
-    header {
-        text-align: center;
-    }
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
+            color: #e6edf3;
+            padding: 0;
+            margin: 0;
+        }
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #161b22;
-        border-top: 2px solid #00e5ff;
-        border-bottom: 2px solid #00e5ff;
-    }
+        header {
+            text-align: center;
+        }
 
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: #e6edf3;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        transition: .3s;
-    }
-
-    li a:hover:not(.active) {
-        background-color: #00e5ff;
-        color: #0d1117;
-    }
-
-    .active {
-        background-color: #2563eb;
-        color: white;
-    }
-
-    h1 {
-        background-color: #0d1117;
-        padding: 15px;
-        margin: 0;
-        color: #00e5ff;
-        text-shadow: 0 0 12px rgba(0,229,255,.8);
-        border-bottom: 2px solid #00e5ff;
-    }
-
-    div.contenedor-formulario {
-        width: 65%;
-        max-width: 800px;
-        margin: 40px auto;
-        border-radius: 10px;
-        background-color: #161b22;
-        border: 2px solid #00e5ff;
-        padding: 30px;
-        box-shadow: 0 0 20px rgba(0,229,255,.25);
-    }
-
-    label {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 5px;
-        color: #7dd3fc;
-        font-weight: bold;
-    }
-
-    input[type=text],
-    input[type=email],
-    textarea,
-    select {
-        width: 100%;
-        padding: 12px 15px;
-        margin: 8px 0 15px;
-        display: inline-block;
-        border: 1px solid #30363d;
-        border-radius: 6px;
-        box-sizing: border-box;
-        background-color: #0d1117;
-        color: #e6edf3;
-        font-family: inherit;
-        transition: .3s;
-    }
-
-    input[type=text]:focus,
-    input[type=email]:focus,
-    textarea:focus,
-    select:focus {
-        outline: none;
-        border-color: #00e5ff;
-        box-shadow: 0 0 10px rgba(0,229,255,.4);
-    }
-
-    textarea {
-        min-height: 140px;
-        resize: vertical;
-    }
-
-    select option {
-        background-color: #161b22;
-        color: #e6edf3;
-    }
-
-    input[type=radio] {
-        margin-top: 15px;
-        margin-right: 5px;
-        accent-color: #00e5ff;
-    }
-
-    i {
-        color: #d1d5db;
-        margin-right: 18px;
-        font-style: normal;
-    }
-
-    input[type=submit] {
-        width: 100%;
-        background: linear-gradient(90deg, #00bcd4, #2563eb);
-        color: white;
-        padding: 14px 20px;
-        margin-top: 25px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        font-family: inherit;
-        transition: .3s;
-    }
-
-    input[type=submit]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 15px rgba(0,229,255,.5);
-    }
-
-    .footer {
-        background-color: #161b22;
-        color: #9ca3af;
-        padding: 15px;
-        text-align: center;
-        clear: both;
-        border-top: 2px solid #00e5ff;
-        margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-
-        div.contenedor-formulario {
-            width: 90%;
-            padding: 20px;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #161b22;
+            border-top: 2px solid #00e5ff;
+            border-bottom: 2px solid #00e5ff;
         }
 
         li {
-            float: none;
+            float: left;
         }
 
-    }
-</style>
+        li a {
+            display: block;
+            color: #e6edf3;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #00e5ff;
+            color: #0d1117;
+        }
+
+        .active {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        h1 {
+            background-color: #0d1117;
+            padding: 15px;
+            margin: 0;
+            color: #00e5ff;
+            text-shadow: 0 0 10px rgba(0, 229, 255, .8);
+            border-bottom: 2px solid #00e5ff;
+        }
+
+        .perfil {
+            width: 75%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 35px;
+            background: rgba(22, 27, 34, .95);
+            border: 2px solid #00e5ff;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 229, 255, .25);
+        }
+
+        .perfil h2 {
+            color: #7dd3fc;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .perfil span {
+            color: #00e5ff;
+        }
+
+        .perfil p {
+            color: #d1d5db;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .redes {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 229, 255, .3);
+        }
+
+        .redes h3 {
+            color: #00e5ff;
+        }
+
+        .redes p {
+            margin-bottom: 20px;
+        }
+
+        .redes a {
+            color: #7dd3fc;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .redes a:hover {
+            color: #00e5ff;
+            text-decoration: underline;
+        }
+
+        .frase {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: #00e5ff;
+            font-style: italic;
+            border-top: 1px solid rgba(0, 229, 255, .3);
+        }
+
+        .footer {
+            background-color: #161b22;
+            color: #9ca3af;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #00e5ff;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .perfil {
+                width: 90%;
+                padding: 20px;
+            }
+
+            li {
+                float: none;
+            }
+
+            li a {
+                text-align: center;
+            }
+
+            .redes p {
+                word-break: break-word;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    
+
     <header>
         <h1>Live Coding: Una Nueva Experiencia</h1>
+
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="cronologia.html">Cronologia</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
                 <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a class="active" href="contacto.html">Contacto</a></li>
+                <li><a class="active" href="contacto.html">Sobre Mí</a></li>
             </ul>
         </nav>
     </header>
 
+    <section class="perfil">
 
-    <div class="contenedor-formulario">
-    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <h2>¡Hola! Soy <span>RafxDev</span> 👋</h2>
 
-    <!-- Netlify identifica el formulario con este campo -->
-    <input type="hidden" name="form-name" value="contacto">
+        <p>
+            Mi nombre como desarrollador es <strong>RafxDev</strong>. Soy un apasionado de la
+            programación, la informática, el software libre, la historia de la computación y la
+            tecnología retro. Disfruto aprender nuevas herramientas y explorar formas creativas de
+            utilizar el código.
+        </p>
 
-    <!-- Campo oculto para evitar spam -->
-    <p hidden>
-        <label>
-            No llenar este campo:
-            <input name="bot-field">
-        </label>
-    </p>
+        <p>
+            Este proyecto fue desarrollado con fines educativos para enseñar HTML y CSS a un grupo
+            de jóvenes programadores, utilizando el <strong>Live Coding</strong> como temática
+            principal. Mi intención fue demostrar que programar también puede ser una forma de hacer
+            arte, música y expresión creativa.
+        </p>
 
-    <label for="nombre">Nombre: </label>
-    <input type="text" id="nombre" name="Nombre" placeholder="Escribí aquí tu nombre" required minlength="3">
+        <p>
+            Además de desarrollar este sitio, siento una gran admiración por artistas como
+            <strong>DJ Dave</strong> y <strong>Switch Angel</strong>, quienes han inspirado mi
+            interés por el Live Coding y la música generativa. Gracias a ellas descubrí una nueva
+            manera de combinar programación y creatividad.
+        </p>
 
-    <label for="apellido">Apellido: </label>
-    <input type="text" id="apellido" name="Apellido" placeholder="Escribí aquí tu apellido" required minlength="3">
+        <div class="redes">
 
-    <label for="mail">Email: </label>
-    <input type="email" id="mail" name="Correo" placeholder="Escribí aquí tu mail" required>
+            <h3>🌐 Mis redes y perfiles</h3>
 
-    <label for="pais">País: </label>
-    <select name="País" id="pais">
-        <option value="Argentina">Argentina</option>
-        <option value="Estados Unidos">Estados Unidos</option>
-        <option value="Bolivia">Bolivia</option>
-        <option value="Perú">Perú</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="España">España</option>
-        <option value="Colombia">Colombia</option>
-        <option value="Venezuela">Venezuela</option>
-        <option value="Paraguay">Paraguay</option>
-        <option value="Otro">Otro/Another</option>
-    </select>
+            <p>
+                <strong>GitHub</strong><br>
+                <a href="https://github.com/RafxDev" target="_blank">
+                    https://github.com/RafxDev
+                </a>
+            </p>
 
-    <label for="comentario">Comentario: </label>
-    <textarea name="Comentario" id="comentario" placeholder="Escribí aquí tu comentario"></textarea>
+            <p>
+                <strong>LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/jrafaelmorantes" target="_blank">
+                    https://www.linkedin.com/in/jrafaelmorantes
+                </a>
+            </p>
 
-    <label>Motivo de contacto: </label><br>
+            <p>
+                <strong>Instagram</strong><br>
+                <a href="https://www.instagram.com/rafxdev/" target="_blank">
+                    https://www.instagram.com/rafxdev/
+                </a>
+            </p>
 
-    <input type="radio" id="conocerte" name="Motivo" value="Conocerte">
-    <i>Conocerte</i>
+            <p>
+                <strong>Correo electrónico</strong><br>
+                <a href="mailto:jrafaelmorantess@gmail.com">
+                    jrafaelmorantess@gmail.com
+                </a>
+            </p>
 
-    <input type="radio" id="proyectos" name="Motivo" value="Proyectos">
-    <i>Proyectos</i>
+        </div>
 
-    <input type="radio" id="saludar" name="Motivo" value="Saludar">
-    <i>Saludar</i>
+        <div class="frase">
+            <h3>"Programming is not only about solving problems; it's also about creating experiences."</h3>
+        </div>
 
-    <input type="radio" id="reclamos" name="Motivo" value="Reclamos jaja">
-    <i>Reclamos jaja</i>
-
-    <br><br>
-
-    <input type="submit" value="Enviar">
-
-</form>
-</div>
-
+    </section>
 
     <footer class="footer">
-        <p>Derechos Reservados &copy; 2026</p>
+        <p>Derechos Reservados &copy; 2026 | Proyecto desarrollado por <strong>RafxDev</strong></p>
     </footer>
 
 </body>
+
 </html>
+```
