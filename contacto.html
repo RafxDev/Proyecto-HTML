@@ -7,6 +7,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/web.ico" type="image/x-icon">
     <title>Live Coding</title>
+        <style>
+    body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #0d1117 100%);
+        color: #e6edf3;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #161b22;
+        border-top: 2px solid #00e5ff;
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #e6edf3;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #00e5ff;
+        color: #0d1117;
+    }
+
+    .active {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    h1 {
+        background-color: #0d1117;
+        padding: 15px;
+        margin: 0;
+        color: #00e5ff;
+        text-shadow: 0 0 12px rgba(0,229,255,.8);
+        border-bottom: 2px solid #00e5ff;
+    }
+
+    div.contenedor-formulario {
+        width: 65%;
+        max-width: 800px;
+        margin: 40px auto;
+        border-radius: 10px;
+        background-color: #161b22;
+        border: 2px solid #00e5ff;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0,229,255,.25);
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: #7dd3fc;
+        font-weight: bold;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 8px 0 15px;
+        display: inline-block;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        box-sizing: border-box;
+        background-color: #0d1117;
+        color: #e6edf3;
+        font-family: inherit;
+        transition: .3s;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        border-color: #00e5ff;
+        box-shadow: 0 0 10px rgba(0,229,255,.4);
+    }
+
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    select option {
+        background-color: #161b22;
+        color: #e6edf3;
+    }
+
+    input[type=radio] {
+        margin-top: 15px;
+        margin-right: 5px;
+        accent-color: #00e5ff;
+    }
+
+    i {
+        color: #d1d5db;
+        margin-right: 18px;
+        font-style: normal;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background: linear-gradient(90deg, #00bcd4, #2563eb);
+        color: white;
+        padding: 14px 20px;
+        margin-top: 25px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: inherit;
+        transition: .3s;
+    }
+
+    input[type=submit]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px rgba(0,229,255,.5);
+    }
+
+    .footer {
+        background-color: #161b22;
+        color: #9ca3af;
+        padding: 15px;
+        text-align: center;
+        clear: both;
+        border-top: 2px solid #00e5ff;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+
+        div.contenedor-formulario {
+            width: 90%;
+            padding: 20px;
+        }
+
+        li {
+            float: none;
+        }
+
+    }
+</style>
 </head>
 
 <body>
@@ -18,14 +182,67 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="cronologia.html">Cronologia</a></li>
                 <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a class="active" href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
 
+    <div class="contenedor-formulario">
+    <form action="https://formsubmit.co/jrafaelmorantess@gmail.com" method="POST">
 
-    <footer>
+        <!-- Configuración de FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde Live Coding">
+        <input type="hidden" name="_template" value="table">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribí aquí tu nombre" required minlength="3">
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido" name="Apellido" placeholder="Escribí aquí tu apellido" required minlength="3">
+
+        <label for="mail">Email: </label>
+        <input type="email" id="mail" name="Correo" placeholder="Escribí aquí tu mail" required>
+
+        <label for="pais">País: </label>
+        <select name="País" id="pais">
+            <option value="Argentina">Argentina</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Perú">Perú</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="España">España</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Otro">Otro/Another</option>
+        </select>
+
+        <label for="comentario">Comentario: </label>
+        <textarea name="Comentario" id="comentario" placeholder="Escribí aquí tu comentario"></textarea>
+
+        <label>Motivo de contacto: </label><br>
+
+        <input type="radio" id="conocerte" name="Motivo" value="Conocerte">
+        <i>Conocerte</i>
+
+        <input type="radio" id="proyectos" name="Motivo" value="Proyectos">
+        <i>Proyectos</i>
+
+        <input type="radio" id="saludar" name="Motivo" value="Saludar">
+        <i>Saludar</i>
+
+        <input type="radio" id="reclamos" name="Motivo" value="Reclamos">
+        <i>Reclamos jaja</i>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</div>
+
+
+    <footer class="footer">
         <p>Derechos Reservados &copy; 2026</p>
     </footer>
 
